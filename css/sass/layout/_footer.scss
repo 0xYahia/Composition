@@ -1,0 +1,148 @@
+// Import Variables
+@use "./sass/helpers/variables" as *;
+// Import Mixixn
+@use "./sass/helpers/mixins" as *;
+/* Start Footer */
+.footer {
+  background-color: #e2e2e2;
+  padding-top: 30px;
+  margin-top: 50px;
+  overflow: hidden;
+  .gallery,
+  .info,
+  .contact {
+    float: $float-l;
+  }
+  .gallery {
+    @include minSmall{
+      width: 100%;
+    }
+    @include minMedium{
+      width: 50%;
+    }
+    .img-box {
+      overflow: hidden;
+      img {
+        margin-bottom: 15px;
+        @include minSmall{
+          float: $float-l;
+          width: 150px;
+          height: 150px;
+        }
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+      }
+      .text {
+        @include minSmall{
+          float: $float-l;
+          width: calc(100% - 190px);
+          margin: auto 20px;
+        }
+        h4 {
+          color: $redColor;
+          margin: 0 0 10px;
+        }
+        p {
+          color: #666;
+          line-height: 1.6;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+  .info {
+    @include minSmall{
+      width: 50%;
+    }
+    @include minMedium{
+      width: 25%;
+    }
+    ul {
+      line-height: 1.8;
+      color: #666;
+      li {
+        span {
+          color: $redColor;
+          opacity: 0.8;
+        }
+      }
+    }
+    h4 {
+      color: #666;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    p {
+      color: #666;
+      margin-top: 5px;
+    }
+  }
+  .contact {
+    @include minSmall{
+      width: 50%;
+    }
+    @include minMedium{
+      width: 25%;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      border: none;
+      margin-bottom: 10px;
+      height: 30px;
+      border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+      padding: 10px 15px;
+      width: 100%;
+      &::placeholder {
+        @include prefixer(transition, 0.3s, webkit moz);
+      }
+      &:focus {
+        outline-color: $redColor;
+      }
+      &:focus::placeholder {
+        opacity: 0;
+      }
+    }
+    textarea {
+      height: 150px;
+    }
+  }
+  h3 {
+    color: #333;
+    font-weight: normal;
+  }
+  .copyright {
+    padding: 10px 0;
+    margin-top: 20px;
+    overflow: hidden;
+    color: #666;
+    border-top: 1px solid $greyColor;
+    @include minSmall{
+      padding: 25px 0;
+      margin-top: 50px;
+    }
+    .text,
+    .author {
+      text-align: center;
+      margin-bottom: 8px;
+      @include minSmall{
+        float: $float-l;
+        width: 50%;
+      }
+    }
+    .author{
+      text-align: center;
+      @include minSmall{
+        text-align: $text-r;
+      }
+    }
+  }
+}
+/* End Footer */

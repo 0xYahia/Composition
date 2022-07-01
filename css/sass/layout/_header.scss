@@ -1,0 +1,62 @@
+
+// Import Variables
+@use "./sass/helpers/variables" as *;
+
+// Import Mixins
+@use "./sass/helpers/mixins" as *;
+
+/* Start Header */
+.header{
+    padding: 20px 0;
+    border-bottom: 1px solid $greyColor;
+    overflow: hidden;
+    position: relative;
+    .logo{
+        width: 30%;
+        float: $float-l;
+        @include maxMobile{
+            width: 70%;
+            float: none;
+            text-align: center;
+        }
+        h1{
+            margin-bottom: 0;
+            margin-top: 10px;
+        }
+    }
+    .navbar{
+        width: 70%;
+        overflow: hidden;
+        float: $float-l;
+        background-color: $redColor;
+        @include prefixer(border-radius, 18px, webkit moz);
+        @include maxMobile {
+            width: 100%;
+            float: none;
+            text-align: center;
+            margin-top: 30px;
+            display: none;
+            border-radius: 0;
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            -ms-border-radius: 0;
+            -o-border-radius: 0;
+        }
+        li{
+            float: $float-l;
+            padding: 20px 5px;
+            width: 20%;
+            font-size: 18px;
+            text-align: center;
+            a{
+                text-decoration: none;
+                color: white;
+                &:hover{
+                    color: #ddd;
+                }
+            }
+        }
+    }
+}
+
+/* End Header */

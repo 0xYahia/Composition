@@ -1,0 +1,104 @@
+// Import Variables
+@use "./sass/helpers/variables" as *;
+// Import Mixins
+@use "./sass/helpers/mixins" as *;
+
+$float-l: right;
+$float-r: left;
+
+$text-r: left;
+$text-l: right;
+
+/* Start Header */
+.header {
+  .logo {
+    float: $float-l;
+  }
+  .the-toggler{
+    right:  auto;
+    left: 18px;
+}
+  .navbar {
+    width: 70%;
+    float: $float-l;
+    li {
+      float: $float-l;
+    }
+  }
+}
+
+/* End Header */
+
+/* Start Services */
+.services {
+  .service-box {
+    text-align: $text-l;
+    // منفعش flex , grid ???
+    @include minSmall {
+      float: $float-l;
+    }
+  }
+}
+/* End Services */
+/* Start Our Players */
+.our-players {
+  .player-box {
+    // منفعش flex , grid ???
+    @include minSmall {
+      float: $float-l;
+    }
+    @include minMedium {
+      float: $float-l;
+    }
+    @include minLarge {
+      float: $float-l;
+    }
+  }
+}
+/* End Our Players */
+/* Start Lorem Ipsum */
+.lorem-ipsum {
+  .lorem-box {
+    @include minSmall {
+      float: $float-l;
+    }
+  }
+}
+/* End Lorem Ipsum */
+
+/* Start Footer */
+.footer {
+  .gallery,
+  .info,
+  .contact {
+    float: $float-l;
+  }
+  .gallery {
+    .img-box {
+      img {
+        @include minSmall {
+          float: $float-l;
+        }
+      }
+      .text {
+        @include minSmall {
+          float: $float-l;
+        }
+      }
+    }
+  }
+  .copyright {
+    .text,
+    .author {
+      @include minSmall {
+        float: $float-l;
+      }
+    }
+    .author {
+      @include minSmall {
+        text-align: $text-r;
+      }
+    }
+  }
+}
+/* End Footer */

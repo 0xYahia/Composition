@@ -1,0 +1,18 @@
+// Import Globalpage
+@use './sass/pages/globalpae' as *;
+
+// Import Mixins
+@use "./sass/helpers/mixins" as *;
+
+// Import Grid
+@use './sass/layout/grid' as *;
+// Import Header
+@use './sass/layout/header' as *;
+// Import Homepages
+@use './sass/pages/homepage' as *;
+// Import Buttons
+@use './sass/components/buttons' as *;
+// Import Heading
+@use './sass/components/headings' as *;
+// Import Footer
+@use './sass/layout/footer' as *;

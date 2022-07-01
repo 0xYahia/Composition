@@ -1,0 +1,50 @@
+// Import Variables
+@use "./sass/helpers/variables" as *;
+// Import Mixins
+@use "./sass/helpers/mixins" as *;
+
+.main-button{
+    background-color: rgba($redColor, .7);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    min-width: 120px;
+    text-transform: uppercase;
+    font-weight: bold;
+    @include prefixer(border-radius, 10px, webkit moz);
+    @include prefixer(transition, .3s, webkit moz);
+    cursor: pointer;
+    &:hover{
+        background-color: $redColor;
+    }
+}
+
+.the-toggler{
+    background-color:$redColor;
+    cursor: pointer;
+    border: none;
+    padding: 8px;
+    position: absolute;
+    right: 15px;
+    top: 18px;
+    display: none;
+    @include maxMobile{
+        display: block;
+        outline: none;
+        top: 10px;
+    }
+    span{
+        display: block;
+        width: 50px;
+        height: 4px;
+        background-color: #fff;
+        &:not(:last-child){
+            margin-bottom: 5px;
+        }
+        @include maxMobile{
+            width: 25px;
+            height: 2px;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+// Import Variables
+@use "./sass/helpers/variables" as *;
+// Import Mixins
+@use "./sass/helpers/mixins" as *;
+/* Start Coponent */
+
+.head-with-border {
+  position: relative;
+  margin: 50px 0;
+  h2 {
+    background-color: $redColor;
+    width: fit-content;
+    padding: 10px 15px;
+    margin: 10px auto;
+    text-transform: uppercase;
+    color: #fff;
+    @include prefixer(border-radius, 15px, webkit moz);
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: $greyColor;
+      top: 50%;
+      left: 0;
+      z-index: -1;
+    }
+  }
+}
+/* End Coponent */
+
