@@ -129,6 +129,11 @@ ul, ol {
   width: 100%;
   margin: 0 auto;
   display: block;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
 }
 .slider .bullets {
   text-align: center;
@@ -150,7 +155,7 @@ ul, ol {
 /* End Slider */
 /* Start Services */
 .services .service-box {
-  text-align: left;
+  text-align: center;
 }
 @media (min-width: 768px) {
   .services .service-box {
